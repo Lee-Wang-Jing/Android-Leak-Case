@@ -22,8 +22,8 @@ public class Case1UtilsSolve {
     }
 
 
-    public void showDialog(Activity activity) {
-        this.activity = activity;
+    public void showDialog(Activity mActivity) {
+        this.activity = mActivity;
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(activity);
             progressDialog.setMessage("正在处理,请稍候");
