@@ -14,7 +14,7 @@ import com.wangjing.androidleakcase.R;
 
 public class CaseUtilsDialogActivity extends AppCompatActivity {
 
-    private Button btn_start;
+    private Button btn_start,btn_start2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class CaseUtilsDialogActivity extends AppCompatActivity {
 
     private void initViews() {
         btn_start = (Button) findViewById(R.id.btn_start);
+        btn_start2= (Button) findViewById(R.id.btn_start2);
     }
 
     private void initListeners() {
@@ -38,6 +39,18 @@ public class CaseUtilsDialogActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Case1Utils.getInstance().disMissDialog();
+                    }
+                },3000);
+            }
+        });
+        btn_start2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Case1UtilsSolve.getInstance().showDialog(CaseUtilsDialogActivity.this);
+                btn_start2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Case1UtilsSolve.getInstance().disMissDialog();
                     }
                 },3000);
             }

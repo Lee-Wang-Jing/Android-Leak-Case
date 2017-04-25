@@ -7,16 +7,16 @@ import android.app.ProgressDialog;
  * Created by wangjing on 2017/4/25.
  */
 
-public class Case1Utils {
+public class Case1UtilsSolve {
 
-    private static Case1Utils instance;
+    private static Case1UtilsSolve instance;
     private ProgressDialog progressDialog;
     private Activity activity;
 
 
-    public static Case1Utils getInstance() {
+    public static Case1UtilsSolve getInstance() {
         if (instance == null) {
-            instance = new Case1Utils();
+            instance = new Case1UtilsSolve();
         }
         return instance;
     }
@@ -36,5 +36,6 @@ public class Case1Utils {
             progressDialog.dismiss();
         }
         activity.finish();
+        activity=null;
     }
 }
