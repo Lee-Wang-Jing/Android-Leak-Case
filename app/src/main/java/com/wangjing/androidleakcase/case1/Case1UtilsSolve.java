@@ -35,7 +35,8 @@ public class Case1UtilsSolve {
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
+        progressDialog = null;
         activity.finish();
-        activity=null;
+        activity = null;
     }
 }
